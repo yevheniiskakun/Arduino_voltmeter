@@ -10,8 +10,9 @@ void setup()
  lcd.init();                      // initialize the lcd 
  // Print a message to the LCD.
  lcd.backlight();
- lcd.print("Voltmeter");
- delay(1000);
+ lcd.print("Hello there");
+ delay(3000);
+ lcd.clear();
 }
 void loop()
 {
@@ -23,7 +24,8 @@ void loop()
    {
      input_voltage=0.0;
    } 
-    
+    lcd.setCursor(0, 0);
+    lcd.print("Voltmeter");
     lcd.setCursor(0, 1);
     lcd.print("Voltage = ");
     lcd.print(input_voltage);
