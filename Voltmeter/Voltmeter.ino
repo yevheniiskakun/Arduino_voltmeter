@@ -17,12 +17,14 @@ void setup()
 void loop()
 {
   analog_value = analogRead(A0);
+  // The number of analog-to-digital converter bits is the amount of bits that make up an ADC reading. 
+  // For example, a particular ADC may hold 10 bits. That means that when it converts an analog value to a digital value, it stores it in 10 bits.
   input_voltage = (analog_value * 5.0) / 1024.0; 
 
    
    if (input_voltage < 0.1) 
    {
-     input_voltage=0.0;
+     input_voltage = 0.0;
    } 
     lcd.setCursor(0, 0);
     lcd.print("Voltmeter");
